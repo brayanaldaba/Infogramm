@@ -3,4 +3,5 @@
     <string name="app_name">My Application</string>
     <string name="Nombre_de_usuario">Username</string>
     <string name="contraseña">Password</string>
+    <string name="botton_text">LOGIN</string>
 </resources>
