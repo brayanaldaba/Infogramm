@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="Nombre_de_usuario">Nombre de usuario</string>
-    <string name="contraseña">contraseña</string>
-    <string name="botton_text">LOGIN</string>
+    <string name="app_name" translatable="false">My Application</string>
+    <string name="Nombre_de_usuario" translatable="false">Nombre de usuario</string>
+    <string name="contraseña" translatable="false">contraseña</string>
+    <string name="botton_text" translatable="false">LOGIN</string>
+    <string name="no_tienes_cuenta" translatable="false">no tienes cuenta?</string>
+    <string name="crea_una_aqui" translatable="false">crea una aqui</string>♠
 </resources>
