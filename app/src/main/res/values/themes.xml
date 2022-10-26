@@ -7,6 +7,10 @@
         <item name="colorAccent">#FF4081</item>
 
     </style>
+
+<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopuOverlay." parent="ThemeOverlay.AppCompat.Light"/>
     <style name="EditTextWhite" parent="Theme.AppCompat.Light">
     <item name="android:textSize">@dimen/editText_textSize</item >
         <item name="android:textColorHint">@color/editText_white</item >
