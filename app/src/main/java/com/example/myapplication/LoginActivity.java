@@ -13,6 +13,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public  void goCreateAccount(View view){
-        System.out.println( "----------------------------> go to create account");
+        Intent intent = Intent( PackageContext: this, CreateAccountActivity.class);
+        startActivity(intent);
     }
 }
