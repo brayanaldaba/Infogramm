@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_item">Home</string>
+    <string name="yo_item">YO</string>
+    <string name="buscar_item">Buscar</string>
+</resources>
