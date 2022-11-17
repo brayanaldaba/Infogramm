@@ -7,14 +7,15 @@
 
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/appbar_toolbar"/>
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_width"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-    <include layout="@layout/cardview_image"/>
-    <include layout="@layout/cardview_image"/>
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout"/>
-    <LinearLayout/>
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout"
+        android:paddingTop="@dimen/padding_card"
+        android:paddingLeft="@dimen/padding_card"
+        android:paddingRight="@dimen/padding_card">
+    </androidx.recyclerview.widget.RecyclerView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="match_parent"
         android:layout_height="match_parent"

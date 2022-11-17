@@ -2,13 +2,20 @@ package com.example.myapplication.view.fragment;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adapter.CardViewAdapter;
+import com.example.myapplication.model.Image;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +68,29 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        //toolbar
+showToolBar(getString(R.string.title_home_fragment), bottonSubir false, view);
+//recyclerview
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        //layout manager
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        //el adapter
+        CardViewAdapter cardViewAdapter = new CardViewAdapter(buidImages(),R.layout.cardview_image,getActivity());
+        recyclerView.setAdapter(cardViewAdapter);
+        return view;
+    }
+    public void shoetoolBar(String titulo, boolean botonSubir){
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(botonSubir);
+}
+//creamos la lista de imagenes
+    public ArrayList<Image> buidImages (){
+        ArrayList<Image> images =ArrayList<>();
+        images.add(new Image(urlImagen:"",username:"Carlos Valdivia", cantidadDias:"2 dias", cantidadMeGusta:"1 me gusta"));
     }
 }
