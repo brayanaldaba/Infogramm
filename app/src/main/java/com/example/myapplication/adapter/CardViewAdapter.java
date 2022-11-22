@@ -35,6 +35,7 @@ this.activity =activity;
     public void onBindViewHolder(@NonNull @NotNull CardViewHolder holder, int position) {
 Image image= images.get()position;
 //image
+        Picasso.get().load(image.getUrlImagen()).into(holder.imageCardView);
         holder.usernameCardView.setText(image.getUsername());
         holder.cantidadDiasCardView.setText(image.getCantidadDias());
         holder.cantidadMeGustaCardView.setText(image.getCantidadMeGusta());
