@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.model.Image;
+import com.example.myapplication.view.ImageDetailActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -33,12 +34,20 @@ this.activity =activity;
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull CardViewHolder holder, int position) {
-Image image= images.get()position;
+Image image= images.get(position);
 //image
         Picasso.get().load(image.getUrlImagen()).into(holder.imageCardView);
         holder.usernameCardView.setText(image.getUsername());
         holder.cantidadDiasCardView.setText(image.getCantidadDias());
         holder.cantidadMeGustaCardView.setText(image.getCantidadMeGusta());
+        //onclicklistener
+        holder.imageCardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent =new Intent(activity, ImageDetailActivity.class);
+                activity.startActivity(intent);
+            }
+        }
     }
 
     @Override
