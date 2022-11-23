@@ -34,8 +34,8 @@ android:background="@drawable/image1"
         app:layout_collapseMode="pin"/>
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
-<android.core.widget.NestedScrollView
+    </com.google.android.material.appbar.AppBarLayout...>
+<androidx.core.widget.NestedScrollView
     android:layout_width=""
     android:layout_height=""
     app:layout_beheavor="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
