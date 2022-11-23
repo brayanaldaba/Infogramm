@@ -1,10 +1,12 @@
 package com.example.myapplication.adapter;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.model.Image;
@@ -45,6 +47,13 @@ Image image= images.get(position);
             @Override
             public void onClick(View view){
                 Intent intent =new Intent(activity, ImageDetailActivity.class);
+                if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.LOLLIPOP){
+                    Explode explode =new Explode();
+                    explode.setFDuration(1000);
+                    activity.getWindow().setExitTransition(explode);
+                    activity.startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, activity.getString(R.string.trasitionName_imageCardView)).toBundle());
+                }
+                }else{
                 activity.startActivity(intent);
             }
         }
